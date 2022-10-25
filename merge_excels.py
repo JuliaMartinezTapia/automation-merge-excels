@@ -28,4 +28,4 @@ df_merged = reduce(lambda  left,right: pd.merge(left,right,on=[name_col],
 
 #Download the merged dataframe to an excel spreadsheet created in the current directory
 
-df_merged.to_excel("merged_df.xlsx")
+df_merged.to_excel("merged.xlsx")
