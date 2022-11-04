@@ -14,18 +14,24 @@ for item in os.listdir(Path.cwd()):
     
     if "xlsx" in item:
 
-        df = pd.read_excel(item)
+        df = pd.read_excel(item, engine = "openpyxl")
         name_col = df.columns[0]
         df = df[((df[name_col]) != " ")][~df[name_col].isna()]
         list_df.append(df)
 
 list_df  
+print(list_df)
 
 #Merging the dataframes in the list using funcional programming (reduce).
 
 df_merged = reduce(lambda  left,right: pd.merge(left,right,on=[name_col],
                                             how='outer'), list_df)
 
+#create a new directory in current directory to store the output excel
+
+Path(str(Path.cwd()) + "./output").mkdir()
+
+
 #Download the merged dataframe to an excel spreadsheet created in the current directory
 
-df_merged.to_excel("merged.xlsx")
+df_merged.to_excel("./output/merged_df.xlsx")

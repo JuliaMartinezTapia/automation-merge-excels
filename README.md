@@ -22,6 +22,8 @@ You must bear in mind that the blank spaces among rows will be deleted by the pr
 
 As an example, I provide nine excel spreadsheets named from "Corp 1.xlxs" to "Corp 9.xlxs", that will be merged into the spreadsheet "merged.xlsx" when the code is run.
 
+Te program will create a new directory "output" within your current directory to store the output excel ("merged.xlsx).
+
 Hope this program is useful for you. Any comment or suggestion will be very good received.
 
 Julia María Martínez Tapia
