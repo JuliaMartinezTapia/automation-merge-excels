@@ -29,9 +29,11 @@ df_merged = reduce(lambda  left,right: pd.merge(left,right,on=[name_col],
 
 #create a new directory in current directory to store the output excel
 
-Path(str(Path.cwd()) + "./output").mkdir()
-
-
+try:
+    Path(str(Path.cwd()) + "./output").mkdir()
+except: 
+    pass
+    
 #Download the merged dataframe to an excel spreadsheet created in the current directory
 
 df_merged.to_excel("./output/merged_df.xlsx")
