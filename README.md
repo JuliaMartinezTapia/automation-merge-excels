@@ -21,6 +21,7 @@ For the program to work properly, the excel spreadsheets to merge need to have t
 You must bear in mind that the blank spaces among rows will be deleted by the program. Otherwise the merge would not work well.
 
 As an example, I provide nine excel spreadsheets named from "Corp 1.xlxs" to "Corp 9.xlxs", that will be merged into the spreadsheet "merged.xlsx" when the code is run.
+Just download the nine excels and the file main.py to the same directory and run the file main.py.
 
 Te program will create a new directory "output" within your current directory to store the output excel ("merged.xlsx).
 
